@@ -1,0 +1,92 @@
+.card {
+  --width: 400px;
+  padding: 6px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 6px;
+  border: 2px solid rgb(140, 225, 120);
+  border-radius: 8px;
+  background-color: rgb(173, 156, 138);
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .card {
+    --width: calc( ( (100vw - 1400px) / (1920 - 1400) ) * (400 - 300) + 300px);
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1400px) {
+  .card {
+    --width: calc( ( (100vw - 300px) / (1400 - 300) ) * (580 - 120) + 120px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .card {
+    --width: calc( ( (100vw - 300px) / (1023 - 300) ) * (900 - 250) + 250px);
+  }
+}
+
+.cardTitle {
+  align-self: center;
+}
+
+.cardInfoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 1400px) {
+  .cardInfoContainer {
+    flex-direction: column-reverse;
+  }
+}
+
+.previewImage {
+  width: var(--width);
+  height: calc(var(--width) * 172/387);
+  border-radius: 8px;
+}
+
+@media (max-width: 1400px) {
+  .previewImage {
+    max-width: 387px;
+    max-height: 172px;
+  }
+}
+
+.cardParagraph {
+  margin: 10px 0 0;
+  width: var(--width);
+  text-align: left;
+}
+
+.cardSpan {
+  font-weight: 600;
+}
+
+.cardAboutContainer {
+  height: 100%;
+  text-align: center;
+}
+
+.cardLinkContainer {
+  margin: 4px 0;
+  text-decoration-line: none;
+  color: #000;
+}
+
+@media (max-width: 1023px) {
+  .cardLinkContainer {
+    width: var(--width);
+  }
+}
+
+.cardLink {
+  text-decoration-line: none;
+  color: brown;
+}
+
