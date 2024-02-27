@@ -12,7 +12,7 @@ function App() {
         <About />
         <section className="projects">
           <Cards cards={projects.petProjects} title={'Пет Проекты'} />
-          <Cards cards={projects.petProjects} title={'Учебные Проекты'} />
+          <Cards cards={projects.educationalProjects} title={'Учебные Проекты'} />
         </section>
       </main>
       <footer className="footer">

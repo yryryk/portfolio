@@ -6,6 +6,7 @@ function Card({card}) {
       <h3 className="cardTitle">{card.name}</h3>
       <div className="cardInfoContainer">
         <div className="cardAboutContainer">
+          <p className="cardParagraph"><span className="cardSpan">Технологии: </span>{card.techs}</p>
           <p className="cardParagraph"><span className="cardSpan">Описание: </span>{card.about}</p>
           <p className="cardParagraph"><span className="cardSpan">Примечание: </span>{card.note}</p>
         </div>
@@ -21,9 +22,24 @@ function Card({card}) {
       </div>
       <div className="cardLinkContainer">
         GitHub: &nbsp;
-        <a href={card.gitHubLink} target="_blank" rel="noreferrer" className="cardLink">
-          {card.gitHubLink}
-        </a>
+        {
+          typeof card.gitHubLink === 'string'
+            ? <a href={card.gitHubLink} target="_blank" rel="noreferrer" className="cardLink">
+                {card.gitHubLink}
+              </a>
+            : <div className="">
+              {card.gitHubLink.map((item) =>
+               (
+                <div className="cardLinkContainer">
+                  {item.name + ': '}
+                  <a id={item.id} href={item.link} target="_blank" rel="noreferrer" className="cardLink">
+                    {item.link}
+                  </a>
+                </div>)
+                )
+              }
+              </div>
+        }
       </div>
     </div>
   );
