@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
+        ПОРТФОЛИО
       </header>
       <main className="main">
         <About />
@@ -16,6 +17,7 @@ function App() {
         </section>
       </main>
       <footer className="footer">
+        <span>&copy; {(new Date()).getFullYear()}</span>
       </footer>
     </div>
   );

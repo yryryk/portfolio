@@ -7,7 +7,7 @@ function About() {
       <div className="aboutContainer">
         <img className="aboutPicture" src={Picture} alt="Фото"></img>
         <div className="aboutInfo">
-          <h2 className="aboutTitle">Александр</h2>
+          <h1 className="aboutTitle">Александр Товченников</h1>
           <p className="aboutSubtitle">Веб-разработчик.</p>
           <div className="aboutLinkContainer">
             <p className="aboutLinkParagraph">Github: <a href="https://github.com/yryryk" target="_blank" rel="noreferrer" className="aboutLink">https://github.com/yryryk</a></p>
