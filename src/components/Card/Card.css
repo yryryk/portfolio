@@ -1,5 +1,4 @@
 .card {
-  --width: 400px;
   margin: 10px 0 0;
   padding: 6px 12px;
   display: flex;
@@ -11,24 +10,6 @@
   background-color: rgb(237, 204, 172);
 }
 
-@media (min-width: 1400px) and (max-width: 1920px) {
-  .card {
-    --width: calc( ( (100vw - 1400px) / (1920 - 1400) ) * (400 - 300) + 300px);
-  }
-}
-
-@media (min-width: 1023px) and (max-width: 1400px) {
-  .card {
-    --width: calc( ( (100vw - 300px) / (1400 - 300) ) * (580 - 120) + 120px);
-  }
-}
-
-@media (max-width: 1023px) {
-  .card {
-    --width: calc( ( (100vw - 360px) / (1023 - 360) ) * (900 - 280) + 280px);
-  }
-}
-
 .cardTitle {
   align-self: center;
 }
@@ -36,7 +17,7 @@
 .cardInfoContainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   gap: 10px;
 }
 
@@ -47,6 +28,7 @@
 }
 
 .previewImage {
+  margin-top: 20px;
   width: var(--width);
   height: calc(var(--width) * 187/372);
   border-radius: 8px;

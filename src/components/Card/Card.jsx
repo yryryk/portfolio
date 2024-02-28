@@ -30,9 +30,9 @@ function Card({card}) {
             : <div className="">
               {card.gitHubLink.map((item) =>
                (
-                <div className="cardLinkContainer">
+                <div key={item.id} className="cardLinkContainer">
                   {item.name + ': '}
-                  <a id={item.id} href={item.link} target="_blank" rel="noreferrer" className="cardLink">
+                  <a href={item.link} target="_blank" rel="noreferrer" className="cardLink">
                     {item.link}
                   </a>
                 </div>)
