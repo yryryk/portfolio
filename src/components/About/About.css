@@ -3,8 +3,7 @@
   padding: 50px 0;
   display: flex;
   justify-content: center;
-  background-color: rgb(160, 120, 120);
-  box-shadow: 0 0 10px rgb(47, 32, 32);
+  background-color: var(--color-third);
 }
 
 .aboutContainer {
@@ -46,18 +45,18 @@
 .aboutLinkParagraph {
   margin: auto;
   padding: 6px 12px;
-  color: rgb(10, 90, 10);
+  color: var(--color-seventh);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.21;
   border: 2px solid gray;
   border-radius: 8px;
-  background-color: rgb(150, 200, 200);
+  background-color: var(--color-fourth);
 }
 
 .aboutLink {
   text-decoration: none;
-  color: #000;
+  color: var(--color-text);
 }
 
 .aboutPicture {
